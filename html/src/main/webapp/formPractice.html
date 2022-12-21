@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+	* {color:blue}
+	ul {overflow: hidden;}
+	li {float:left; list-style: none; padding:15px;}
+	a {text-decoration: none; color:white;}
+	a:hover {color:red;}
+	#i1 {background-color: cyan}
+	.c1 {color: red}
+	td {border: 1px solid black; color: red}
+	table {width:300px; height:300px; text-align: center;}
+	h1 {font-family: 'Single Day', cursive;}
+	h1:hover {background-color: gray;}
+	td:hover {background-color: gray}
+	td:active {background-color: magenta}
+	li:first-child {border-radius: 10px 0 0 10px}
+	li:last-child {border-radius: 0 10px 10px 0}
+	li:nth-child(2n) {background-color: black}
+	li:nth-child(2n+1) {background-color: gray}
+</style>
+</head>
+<body>
+	<ul>
+		<li><a href=#>디지털컨버전스</a>
+		<li><a href=#>디지털디자인</a>
+		<li><a href=#>네트워크보안</a>
+		<li><a href=#>ERP실무자양성</a>
+	</ul>
+	<h1>폼 태그 실습</h1>
+	이&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;름 <input type=text><br>
+	비밀번호 <input type=password><br>
+	첨부파일 <input type=file><br>
+	<input type=submit><br><br>
+	<fieldset>
+		<legend>과정선택</legend>
+		<p>원하시는 과정을 선택하세요.(중복불가)
+		<p><span id=i1><label><input type=radio name=n1>디지털 컨버전스</label></span>
+		<label><input type=radio name=n1>디지털 디자인</label>
+		<label><input type=radio name=n1>ERP 실무가 양성과정</label>
+		<label><input type=radio name=n1>네트워크 보안</label>
+	</fieldset><br>
+	<fieldset>
+		<legend>관심분야</legend>
+		<p>관심분야를 선택해주세요.(다중선택가능)
+		<p><label><input type=checkbox><span class=c1>백엔드</span></label>
+		<label><input type=checkbox><span class=c1>프론트엔드</span></label>
+		<label><input type=checkbox>네트워크</label>
+		<label><input type=checkbox>디자인</label>
+		<p>기타 문의사항
+		<p><textarea rows="10" cols="60" placeholder="글을 남겨 주세요"></textarea>
+		<p>거주지역
+		<select>
+			<option>대구
+			<option>서울
+			<option>부산
+		</select>
+	</fieldset>
+	<h1>오디오/비디오 태그 실습</h1>
+	<audio src="mybgm.mp3" controls="controls"></audio><br><br><br>
+	<video src="test1.mp4" controls="controls" width=500></video>
+	<h1>테이블 실습</h1>
+	<table>
+		<tr>
+			<td>1행 1열
+			<td>1행 2열
+			<td>1행 3열
+		<tr>
+			<td>2행 1열
+			<td>2행 2열
+			<td>2행 3열
+		<tr>
+			<td>3행 1열
+			<td>3행 2열
+			<td>3행 3열
+	</table>
+	<table>
+		<tr>
+			<td rowspan=2>1행1열+2행1열
+			<td colspan=2>1행2열+1행3열
+		<tr>
+			<td>2행2열
+			<td rowspan=2>2행3열+3행3열
+		<tr>
+			<td colspan=2>3행1열+3행2열
+	</table>
+</body>
+</html>

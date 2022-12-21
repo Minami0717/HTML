@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	div {border: 1px solid black;}
+	#big { width: 500px; height: 600px; position: relative;}
+	#b6 {width: 500px; height: 496px; position: absolute; left: 0; top: 0;
+	background-repeat: no-repeat; background-size: cover;}
+	.box {width: 100px; height: 100px;}
+	#b1 {position: absolute; bottom: 0; background-image: url(cat.jpg); background-size: cover;}
+	#b2 {position: absolute; bottom: 0; left: 100px;
+	background-image: url(programmer.png); background-size: cover;}
+	#b3 {position: absolute; bottom: 0; left: 200px;
+	background-image: url(모차르트.jpg); background-size: cover;}
+	#b4 {position: absolute; bottom: 0; left: 300px;
+	background-image: url(PIA03149_ip.jpg); background-size: cover;}
+	#b5 {position: absolute; bottom: 0; left: 400px;
+	background-image: url(PIA12110_ip.jpg); background-size: cover;}
+	#b1:hover ~ #b6 {background-image: url(cat.jpg);}
+	#b2:hover ~ #b6 {background-image: url(programmer.png);}
+	#b3:hover ~ #b6 {background-image: url(모차르트.jpg);}
+	#b4:hover ~ #b6 {background-image: url(PIA03149_ip.jpg);}
+	#b5:hover ~ #b6 {background-image: url(PIA12110_ip.jpg);}
+	
+</style>
+</head>
+<body>
+	<div id=big>
+		<div class=box id=b1>
+		</div>
+		<div class=box id=b2>
+		</div>
+		<div class=box id=b3>
+		</div>
+		<div class=box id=b4>
+		</div>
+		<div class=box id=b5>
+		</div>
+		<div id=b6>
+		</div>
+	</div>
+</body>
+</html>
