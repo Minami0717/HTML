@@ -9,7 +9,12 @@
 	li {list-style-type: none; float: left; margin-right: 20px;}
 	header {position: fixed; background: white; width: 100%; z-index: 1; height: 150px;}
 	nav {float: right;}
-	nav:last-child {font-size: 20px;}
+	nav:first-child a {color: white;}
+	nav:first-child li {background: #9baec8; padding: 5px 15px; margin: 1px;}
+	nav:first-child li:last-child {background: #2b90d9;}
+	nav:last-child {font-size: 20px; margin-right: 30%;}
+	nav:last-child ul {text-align: center;}
+	#img {text-align: center;}
 	section {text-align: center; padding-top: 150px;
 	background: linear-gradient(aqua,aquamarine)}
 	footer, footer p {background: black; color: white;}
@@ -63,32 +68,31 @@
 	<header>
 		<nav>
 			<ul>
-				<li><a href=#>학생관리</a>
+				<li><a href=#>설문조사</a>
 				<li><a href=#>NCS평가</a>
 				<li><a href=#>시험응시</a>
-				<li><a href=#>정보수정</a>
-				<li><a href=#>회원탈퇴</a>
-				<li><a href=#>로그아웃</a>
+				<li><a href=#>회원가입</a>
+				<li><a href=#>로그인</a>
+				<li><a href=#>아이디/비밀번호찾기</a>
 				<li><a href=#>사이트맵</a>
+				<li><a href=#>학생용</a>
 			</ul>
 		</nav>
-		<div id=img><img src=image/digital.png></div>
+		<div id=img><img src=image/logo.png></div>
 		<nav>
 			<ul>
+				<li><a href=#><b>학교소개</b></a>
 				<li><a href=#><b>모집과정</b></a>
 					<ul class=sub>
 						<li>현재모집중인과정
 						<li>진행중인과정
 						<li>연간모집과정
 					</ul>
-				<li><a href=#><b>입학상담</b></a>
-				<li><a href=#><b>과정소개</b></a>
-				<li><a href=#><b>취업센터</b></a>
+				<li><a href=#><b>입학신청</b></a>
+				<li><a href=#><b>교육과정소개</b></a>
+				<li><a href=#><b>강의자료</b></a>
+				<li><a href=#><b>정보센터</b></a>
 				<li><a href=#><b>커뮤니티</b></a>
-				<li><a href=#><b>학교소개</b></a>
-				<li><input type="checkbox" id=menu>
-					<label for=menu><img src=image/header_right_button.png></label>
-					<div id=menuButton>test</div>
 			</ul>
 		</nav>
 	</header>
@@ -124,7 +128,7 @@
 			이렇게 힘들고 위험한 일이므로 보수가 높고 수요도 많은 편에 속한다. 용접 분야는 언제나 수요가 있는 기술이라, 꽤나 많은 분야의 일을 할 수 있다.
 		</div>
 		<div id=top><a href=#>Top</a></div>
-		<iframe src=http://www.kcd.or.kr width=64% height=700px frameborder=0></iframe>
+		<!-- <iframe src=http://www.kcd.or.kr width=64% height=700px frameborder=0></iframe> -->
 	</section>
 	<footer>
 		개인정보보호
