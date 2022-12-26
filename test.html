@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	* {color: black; margin: 0; padding: 0}
+	a {text-decoration: none;}
+	li {list-style-type: none; float: left; margin-right: 20px;}
+	header {position: fixed; background: white; width: 100%; z-index: 1; height: 150px;}
+	#sub {background: blue; clear: both; height: 0; overflow: hidden;
+	margin-top: 49px; opacity: 0.9; padding-left: 24%;}
+	#sub li {clear: both; width: 160px; margin: 0;}
+	#sub ul {display: inline-block; text-align: center;}
+	#sub a {color: white;}
+	nav {float: right;}
+	nav:first-child a {color: white;}
+	nav:first-child li {background: #9baec8; padding: 5px 15px; margin: 1px;}
+	nav:first-child li:last-child {background: #2b90d9;}
+	#nav2 {font-size: 20px; margin-right: 15%; height: 50px;}
+	#nav2 ul {text-align: center;}
+	#nav2 li {margin: 0 40px;}
+	#img {text-align: center;}
+	section {text-align: center; padding-top: 150px;}
+	h1 {margin: 20px;}
+	footer, footer p, footer a {background: #e4e7ec; color: #263959;}
+	footer { padding: 20px 300px;}
+	#img,#img2,#img3 {clear: both;}
+	#img3 {width: 70%; margin-left: 15%;}
+	#img3 img {display: none;}
+	input {display: none;}
+	#button {text-align: center; margin-left: 18.2%;}
+	#button label {border: 1px solid black; float: left; width: 200px; line-height: 40px;
+	background: white;}
+	#menuButton {display: none;}
+	#text {display: none;}
+	#top {position: fixed; right: 10px; bottom: 100px; transform: rotate(-90deg);
+	background: cornsilk; width: 70px; border-radius: 2em;}
+	iframe {margin: 50px;}
+	.sub {height: 0; overflow: hidden; background-color: rgb(0, 128, 255); font-size: 15px;}
+	.sub li {clear: both; padding: 10px;}
+	nav li {text-align: center;}
+	#notice {border: 1px solid black; width: 32%; display: inline-block; height: 300px;}
+	
+	#total:checked ~ div label[for=total] {color: blue; font-weight: bold;
+	border-bottom: 3px solid blue;}
+	#it:checked ~ div label[for=it] {color: blue; font-weight: bold;
+	border-bottom: 3px solid blue;}
+	#plc:checked ~ div label[for=plc] {color: blue; font-weight: bold;
+	border-bottom: 3px solid blue;}
+	#plan:checked ~ div label[for=plan] {color: blue; font-weight: bold;
+	border-bottom: 3px solid blue;}
+	#design:checked ~ div label[for=design] {color: blue; font-weight: bold;
+	border-bottom: 3px solid blue;}
+	#weld:checked ~ div label[for=weld] {color: blue; font-weight: bold;
+	border-bottom: 3px solid blue;}
+	input[type=checkbox]:checked ~ #menuButton {display: block; background: white;
+	width: 100px; height: 500px;}
+	
+	#total:checked ~ div img {display: inline-block;}
+	#it:checked ~ div img:nth-child(1) {display: inline-block;}
+	#it:checked ~ div img:nth-child(2) {display: inline-block;}
+	#it:checked ~ div img:nth-child(3) {display: inline-block;}
+	#it:checked ~ div img:nth-child(4) {display: inline-block;}
+	#plc:checked ~ div img:nth-child(5) {display: inline-block;}
+	#plan:checked ~ div img:nth-child(6) {display: inline-block;}
+	#design:checked ~ div img:nth-child(7) {display: inline-block;}
+	#design:checked ~ div img:nth-child(8) {display: inline-block;}
+	#weld:checked ~ #text {display: inline-block;}
+	
+	#nav2:hover ~ #sub, #sub:hover {height: 300px; transition: .5s;}
+	nav li:hover b {color: red;}
+</style>
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><a href=#>설문조사</a>
+				<li><a href=#>NCS평가</a>
+				<li><a href=#>시험응시</a>
+				<li><a href=#>회원가입</a>
+				<li><a href=#>로그인</a>
+				<li><a href=#>아이디/비밀번호찾기</a>
+				<li><a href=#>사이트맵</a>
+				<li><a href=#>학생용</a>
+			</ul>
+		</nav>
+		<div id=img><img src=image/digital.png></div>
+		<nav id=nav2>
+			<ul>
+				<li><a href=#><b>학교소개</b></a>
+				<li><a href=#><b>모집과정</b></a>
+					<!-- <ul class=sub>
+						<li>현재모집중인과정
+						<li>진행중인과정
+						<li>연간모집과정
+					</ul> -->
+				<li><a href=#><b>입학신청</b></a>
+				<li><a href=#><b>교육과정소개</b></a>
+				<li><a href=#><b>강의자료</b></a>
+				<li><a href=#><b>정보센터</b></a>
+				<li><a href=#><b>커뮤니티</b></a>
+			</ul>
+		</nav>
+		<div id=sub>
+			<ul>
+				<li><a href=#>인사말</a>
+				<li><a href=#>교육목표 및 방침</a>
+			</ul>
+			<ul>
+				<li><a href=#>현재모집중인과정</a>
+				<li><a href=#>진행중인과정</a>
+			</ul>
+			<ul>
+				<li><a href=#>온라인접수</a>
+				<li><a href=#>입학상담</a>
+			</ul>
+			<ul>
+				<li><a href=#>과정평가형자격과정</a>
+				<li><a href=#>한디 합격률 확인하기!</a>
+			</ul>
+			<ul>
+				<li><a href=#>머시닝센터(MCT)</a>
+				<li><a href=#>CNC선반</a>
+			</ul>
+			<ul>
+				<li><a href=#>취업정보센터</a>
+				<li><a href=#>산학협력업체</a>
+			</ul>
+			<ul>
+				<li><a href=#>공지사항</a>
+				<li><a href=#>갤러리</a>
+			</ul>
+		</div>
+	</header>
+	<section>
+		<div id=img2><img src=image/mainimage01.JPG></div>
+		<div>
+			<img src=image/banner1.png>
+			<img src=image/digital1.jpg>
+		</div>
+		<div>
+			<img src=image/banner3.png>
+			<img src=image/banner4.png>
+		</div>
+		<h1>현재 모집중인 과정</h1>
+		<input type=radio id=total name=button checked>
+		<input type=radio id=it name=button>
+		<input type=radio id=plc name=button>
+		<input type=radio id=plan name=button>
+		<input type=radio id=design name=button>
+		<input type=radio id=weld name=button>
+		<div id=button>
+			<label for=total>전체과정</label>
+			<label for=it>IT/SW</label>
+			<label for=plc>전기PLC</label>
+			<label for=plan>기계설계</label>
+			<label for=design>디자인</label>
+			<label for=weld>용접</label>
+		</div>
+		<div id=img3>
+			<img src=image/class_tab_item01.png>
+			<img src=image/class_tab_item02.png>
+			<img src=image/class_tab_item03.png>
+			<img src=image/class_tab_item04.png>
+			<img src=image/class_tab_item05.png>
+			<img src=image/class_tab_item06.png>
+			<img src=image/class_tab_item07.png>
+			<img src=image/class_tab_item08.png>
+		</div>
+		<div id=text>
+			두 개의 똑같거나 서로 다른 금속 재료 사이에 고열을 가해서 붙이는 기술이다. 금속은 금속끼리 접할 때 전자를 교환하며 붙는 금속결합을 하게 되는데, (주로 고열을 이용해 녹여서) 서로 다른 재료의 결합 표면을 일치시키고 불순물을 제거, 혹은 섞여 들어가게 하여 붙이게 된다.
+			용접은 강한 빛과 열, 허리와 무릎에 좋지 않은 자세, 용접 시 나오는 가스 등으로 인해 건강에 안 좋다. 여름엔 용접으로 발생하는 열과 기온으로 인해 매우 덥다. 겨울엔 따뜻하다고 착각할 수 있지만, 용접시 발생하는 열과 흄 때문에 환풍기를 켜놔야하다보니 춥다.
+			이렇게 힘들고 위험한 일이므로 보수가 높고 수요도 많은 편에 속한다. 용접 분야는 언제나 수요가 있는 기술이라, 꽤나 많은 분야의 일을 할 수 있다.
+		</div>
+		<div id=top><a href=#>Top</a></div>
+		<div>
+			<div id=notice>
+				<h3>공지사항</h3>
+			</div>
+			<div id=notice>
+				<h3>공지사항</h3>
+			</div>
+		</div>
+		<div>
+			<div id=notice>
+				<h3>공지사항</h3>
+			</div>
+			<div id=notice>
+				<h3>공지사항</h3>
+			</div>
+		</div>
+		<!-- <iframe src=http://www.kcd.or.kr width=64% height=700px frameborder=0></iframe> -->
+	</section>
+	<footer>
+		<a href=#>개인정보보호정책</a> <a href=#>메일주소무단수집거부</a>
+		<br><br><hr><br>
+		<p>회사명 : 한국디지털직업전문학교 대표자 : 전휴정 Tel : 053-951-9800 Fax : 053-951-9801 개인정보보호책임자 : 전종범 사업자번호 : 502-81-96068
+		<p>701-818 대구광역시 동구 신암로 128 (신암동,연곡빌딩)
+		<p>copyright © 한국디지털직업전문학교. All Rights Reserved.<br>
+	</footer>
+</body>
+</html>
