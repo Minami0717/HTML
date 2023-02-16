@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	div[id*=ft] {background: linear-gradient(45deg, red, blue); width: 100px; height: 100px;}
+	div[id$=y] {background: red; width: 100px; height: 0;}
+	div[id$=t]:hover ~ div[id$=y] {height: 100px; transition-duration: 0.5s;}
+</style>
+</head>
+<body>
+	<div id=deft></div>
+	<div id=doly></div>
+</body>
+</html>

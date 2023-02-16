@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	li {list-style-type: none;}
+	* {margin: 0; padding: 0;}
+	#image {width: 100%; height: 200px; background-image: url(cat.jpg);
+	/*background-repeat: no-repeat;*/ background-size: cover;
+	background-position: center; border: 1px solid black;}
+	.main {float: left; margin: 10px;}
+	.main li:hover .sub {height: 70px; transition-duration: 1s;}
+	.main ul {overflow: hidden; height: 0;}
+</style>
+</head>
+<body>
+	<div id=image></div>
+	<ul class=main>
+		<li>메뉴1
+			<ul class=sub>
+				<li>서브1
+				<li>서브2
+				<li>서브3
+			</ul>
+		</li>
+	</ul>
+	<ul class=main>
+		<li>메뉴2
+			<ul class=sub>
+				<li>서브1
+				<li>서브2
+				<li>서브3
+			</ul>
+		</li>
+	</ul>
+	<ul class=main>
+		<li>메뉴3
+			<ul class=sub>
+				<li>서브1
+				<li>서브2
+				<li>서브3
+			</ul>
+		</li>
+	</ul>
+	<ul class=main>
+		<li>메뉴4
+			<ul class=sub>
+				<li>서브1
+				<li>서브2
+				<li>서브3
+			</ul>
+		</li>
+	</ul>
+	<ul class=main>
+		<li>메뉴5
+			<ul class=sub>
+				<li>서브1
+				<li>서브2
+				<li>서브3
+			</ul>
+		</li>
+	</ul>
+</body>
+</html>

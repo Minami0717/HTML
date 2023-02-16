@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+	* {margin: 0; padding: 0;}
+	html,body {height: 100%;}
+	#back {background-image: url(image/japan.jpg); background-size: cover; width: 100%; height: 500px;}
+	li {list-style-type: "\2d\20";}
+	.a {list-style-type: "\2a\20"}
+	h1 {float: left; padding: 25px; font-family: 'Bungee Spice', cursive;}
+	a {text-decoration: none; color: lightcoral; font-style: italic; font-size: 20px;}
+	nav {float: right; padding-top: 20px; padding-right: 10px;}
+	header {background: linear-gradient(aqua, mediumspringgreen); padding: 10px; height:10%; color: white;}
+	section {background: linear-gradient(lightpink, sandybrown); padding: 20px;}
+	nav li {float: left; list-style: none; padding:15px 30px;}
+	article li {margin:20px;}
+	footer {background: linear-gradient(royalblue, maroon); color: aquamarine; padding: 20px;}
+	hr {border-style: dashed;}
+	#profile {color: lightslategray;}
+	#portfolio {color: chocolate;}
+	#portfolio div {display: inline-block; position: relative; margin: 5px;}
+	#portfolio p {position: absolute; top: 0; left: 35%;}
+	#contact {color: darkgreen;}
+	
+	#photo {color: blueviolet;}
+	#photo div {border: 1px solid black;}
+	#big { width: 500px; height: 600px; position: relative;}
+	#b6 {width: 500px; height: 496px; position: absolute; left: 0; top: 0;
+	background-repeat: no-repeat; background-size: cover;
+	background-image: url(image/image1.gif); background-position: center; }
+	.box {width: 100px; height: 100px;}
+	#b1 {position: absolute; bottom: 0; background-position: center;
+	background-image: url(image/image1.gif); background-size: cover;}
+	#b2 {position: absolute; bottom: 0; left: 100px;
+	background-image: url(image/image2.gif); background-size: cover;}
+	#b3 {position: absolute; bottom: 0; left: 200px;
+	background-image: url(image/image3.gif); background-size: cover;}
+	#b4 {position: absolute; bottom: 0; left: 300px;
+	background-image: url(image/image4.gif); background-size: cover;}
+	#b5 {position: absolute; bottom: 0; left: 400px;
+	background-image: url(image/image5.gif); background-size: cover;}
+	
+	#b1:hover ~ #b6 {background-image: url(image/image1.gif);}
+	#b2:hover ~ #b6 {background-image: url(image/image2.gif);}
+	#b3:hover ~ #b6 {background-image: url(image/image3.gif);}
+	#b4:hover ~ #b6 {background-image: url(image/image4.gif);}
+	#b5:hover ~ #b6 {background-image: url(image/image5.gif);}
+</style>
+</head>
+<body>
+	<header>
+		<h1>Minami</h1>
+		<nav>
+			<ul>
+				<li><a href=#>Home</a>
+				<li><a href=#profile>Profile</a>
+				<li><a href=#portfolio>Portfolio</a>
+				<li><a href=#photo>Photo</a>
+				<li><a href=#contact>Contact</a>
+			</ul>
+		</nav>
+	</header>
+	<div id=back></div>
+	<section>
+		<article id=profile>
+			<h2>Profile</h2>
+			<ul>
+				<li class=a>Profile
+				<li class=a>Skills
+				<li>Portfolio
+				<li>Links
+				<li>Board
+			</ul>
+		</article>
+		<article id=portfolio>
+			<br><h2>Portfolio</h2><br>
+			<div><img src="image/image1.jpg"><p>portfolio1</div>
+			<div><img src="image/image2.jpg"><p>portfolio2</div>
+			<div><img src="image/image10.jpg"><p>portfolio3</div>
+			<div><img src="image/image4.jpg"><p>portfolio4</div>
+			<div><img src="image/image5.jpg"><p>portfolio5</div>
+			<div><img src="image/image6.jpg"><p>portfolio6</div>
+			<div><img src="image/image7.jpg"><p>portfolio7</div>
+			<div><img src="image/image8.jpg"><p>portfolio8</div>
+			<div><img src="image/image9.jpg"><p>portfolio9</div>
+		</article>
+		<article id=photo>
+			<br><h2>Photo</h2><br>
+			<div id=big>
+				<div class=box id=b1></div>
+				<div class=box id=b2></div>
+				<div class=box id=b3></div>
+				<div class=box id=b4></div>
+				<div class=box id=b5></div>
+				<div id=b6></div>
+			</div>
+		</article>
+		<article id=contact>
+			<br><h2>Contact</h2>
+			<ul>
+				<li>Profile
+				<li>Skills
+				<li>Portfolio
+				<li>Links
+				<li>Board
+			</ul>
+		</article>
+	</section>
+	<footer>
+		개인정보보호
+		<br><br><hr><br>
+		<p>대표 김재현, 김용현
+		사업자번호 375-87-00088
+		직업정보제공사업 신고번호 2016-서울서초-0051
+		주소 서울특별시 구로구 디지털로 30길 28, 609호 (당근서비스)
+		전화 1544-9796고객문의 cs@daangnservice.com</p><br>
+		<a href=https://www.facebook.com target=_blank><img src="image/footer_sns01.png" width=50></a>
+		<a href=https://www.kakao.com/talk target=_blank><img src="image/footer_sns02.png" width=50></a>
+		<a href=https://www.instagram.com target=_blank><img src="image/footer_sns03.png" width=50></a>
+		<a href=https://section.blog.naver.com target=_blank><img src="image/footer_sns04.png" width=50></a>
+	</footer>
+</body>
+</html>

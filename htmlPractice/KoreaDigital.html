@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	* {color: black; margin: 0; padding: 0}
+	a {text-decoration: none;}
+	li {list-style-type: none; float: left; margin-right: 20px;}
+	header {position: fixed; background: white; width: 100%; z-index: 1; height: 150px;}
+	nav {float: right;}
+	nav:last-child {font-size: 20px;}
+	section {text-align: center; padding-top: 150px;
+	background: linear-gradient(aqua,aquamarine)}
+	footer, footer p {background: black; color: white;}
+	#img,#img2,#img3 {clear: both;}
+	#img3 {width: 70%; margin-left: 15%;}
+	#img3 img {display: none;}
+	input {display: none;}
+	#button {text-align: center; margin-left: 18.2%;}
+	#button label {border: 1px solid black; float: left; width: 200px; line-height: 40px;
+	background: white;}
+	#menuButton {display: none;}
+	#text {display: none;}
+	#top {position: fixed; right: 10px; bottom: 100px; transform: rotate(-90deg);
+	background: cornsilk; width: 70px; border-radius: 2em;}
+	iframe {margin: 50px;}
+	.sub {height: 0; overflow: hidden; background-color: rgb(0, 128, 255); font-size: 15px;}
+	.sub li {clear: both; padding: 10px;}
+	nav li {text-align: center;}
+	
+	#total:checked ~ div label[for=total] {color: blue; font-weight: bold;
+	border-bottom: 3px solid blue;}
+	#it:checked ~ div label[for=it] {color: blue; font-weight: bold;
+	border-bottom: 3px solid blue;}
+	#plc:checked ~ div label[for=plc] {color: blue; font-weight: bold;
+	border-bottom: 3px solid blue;}
+	#plan:checked ~ div label[for=plan] {color: blue; font-weight: bold;
+	border-bottom: 3px solid blue;}
+	#design:checked ~ div label[for=design] {color: blue; font-weight: bold;
+	border-bottom: 3px solid blue;}
+	#weld:checked ~ div label[for=weld] {color: blue; font-weight: bold;
+	border-bottom: 3px solid blue;}
+	input[type=checkbox]:checked ~ #menuButton {display: block; background: white;
+	width: 100px; height: 500px;}
+	
+	#total:checked ~ div img {display: inline-block;}
+	#it:checked ~ div img:nth-child(1) {display: inline-block;}
+	#it:checked ~ div img:nth-child(2) {display: inline-block;}
+	#it:checked ~ div img:nth-child(3) {display: inline-block;}
+	#it:checked ~ div img:nth-child(4) {display: inline-block;}
+	#plc:checked ~ div img:nth-child(5) {display: inline-block;}
+	#plan:checked ~ div img:nth-child(6) {display: inline-block;}
+	#design:checked ~ div img:nth-child(7) {display: inline-block;}
+	#design:checked ~ div img:nth-child(8) {display: inline-block;}
+	#weld:checked ~ #text {display: inline-block;}
+	
+	nav li:hover .sub {height: 120px; transition: 1s;}
+	nav li:hover {background-color: rgb(0, 128, 255); transition: 1s;}
+</style>
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><a href=#>학생관리</a>
+				<li><a href=#>NCS평가</a>
+				<li><a href=#>시험응시</a>
+				<li><a href=#>정보수정</a>
+				<li><a href=#>회원탈퇴</a>
+				<li><a href=#>로그아웃</a>
+				<li><a href=#>사이트맵</a>
+			</ul>
+		</nav>
+		<div id=img><img src=image/digital.png></div>
+		<nav>
+			<ul>
+				<li><a href=#><b>모집과정</b></a>
+					<ul class=sub>
+						<li>현재모집중인과정
+						<li>진행중인과정
+						<li>연간모집과정
+					</ul>
+				<li><a href=#><b>입학상담</b></a>
+				<li><a href=#><b>과정소개</b></a>
+				<li><a href=#><b>취업센터</b></a>
+				<li><a href=#><b>커뮤니티</b></a>
+				<li><a href=#><b>학교소개</b></a>
+				<li><input type="checkbox" id=menu>
+					<label for=menu><img src=image/header_right_button.png></label>
+					<div id=menuButton>test</div>
+			</ul>
+		</nav>
+	</header>
+	<section>
+		<div id=img2><img src=image/mainimage01.JPG></div>
+		<input type=radio id=total name=button checked>
+		<input type=radio id=it name=button>
+		<input type=radio id=plc name=button>
+		<input type=radio id=plan name=button>
+		<input type=radio id=design name=button>
+		<input type=radio id=weld name=button>
+		<div id=button>
+			<label for=total>전체과정</label>
+			<label for=it>IT/SW</label>
+			<label for=plc>전기PLC</label>
+			<label for=plan>기계설계</label>
+			<label for=design>디자인</label>
+			<label for=weld>용접</label>
+		</div>
+		<div id=img3>
+			<img src=image/class_tab_item01.png>
+			<img src=image/class_tab_item02.png>
+			<img src=image/class_tab_item03.png>
+			<img src=image/class_tab_item04.png>
+			<img src=image/class_tab_item05.png>
+			<img src=image/class_tab_item06.png>
+			<img src=image/class_tab_item07.png>
+			<img src=image/class_tab_item08.png>
+		</div>
+		<div id=text>
+			두 개의 똑같거나 서로 다른 금속 재료 사이에 고열을 가해서 붙이는 기술이다. 금속은 금속끼리 접할 때 전자를 교환하며 붙는 금속결합을 하게 되는데, (주로 고열을 이용해 녹여서) 서로 다른 재료의 결합 표면을 일치시키고 불순물을 제거, 혹은 섞여 들어가게 하여 붙이게 된다.
+			용접은 강한 빛과 열, 허리와 무릎에 좋지 않은 자세, 용접 시 나오는 가스 등으로 인해 건강에 안 좋다. 여름엔 용접으로 발생하는 열과 기온으로 인해 매우 덥다. 겨울엔 따뜻하다고 착각할 수 있지만, 용접시 발생하는 열과 흄 때문에 환풍기를 켜놔야하다보니 춥다.
+			이렇게 힘들고 위험한 일이므로 보수가 높고 수요도 많은 편에 속한다. 용접 분야는 언제나 수요가 있는 기술이라, 꽤나 많은 분야의 일을 할 수 있다.
+		</div>
+		<div id=top><a href=#>Top</a></div>
+		<iframe src=http://www.kcd.or.kr width=64% height=700px frameborder=0></iframe>
+	</section>
+	<footer>
+		개인정보보호
+		<br><br><hr><br>
+		<p>대표 김재현, 김용현
+		사업자번호 375-87-00088
+		직업정보제공사업 신고번호 2016-서울서초-0051
+		주소 서울특별시 구로구 디지털로 30길 28, 609호 (당근서비스)
+		전화 1544-9796고객문의 cs@daangnservice.com</p><br>
+		<a href=https://www.facebook.com target=_blank><img src="image/footer_sns01.png" width=50></a>
+		<a href=https://www.kakao.com/talk target=_blank><img src="image/footer_sns02.png" width=50></a>
+		<a href=https://www.instagram.com target=_blank><img src="image/footer_sns03.png" width=50></a>
+		<a href=https://section.blog.naver.com target=_blank><img src="image/footer_sns04.png" width=50></a>
+	</footer>
+</body>
+</html>

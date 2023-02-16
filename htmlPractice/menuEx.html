@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	* {margin: 0;}
+	#menu div {background: orange; width: 100px; height: 60px; border: 1px solid black;}
+	li {list-style-type: none;}
+	ul {background: green; width: 100px; padding: 0; height: 0; overflow: hidden; border: 1px solid black;}
+	#menu > div:hover + ul {height: 70px; transition-duration: 1s;}
+</style>
+</head>
+<body>
+	<div id=menu>
+		<div>메뉴1</div>
+		<ul>
+			<li>서브1
+			<li>서브2
+			<li>서브3
+		</ul>
+		<div>메뉴2</div>
+		<ul>
+			<li>서브1
+			<li>서브2
+			<li>서브3
+		</ul>
+		<div>메뉴3</div>
+		<ul>
+			<li>서브1
+			<li>서브2
+			<li>서브3
+		</ul>
+	</div>
+</body>
+</html>
