@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container"></div>
+</body>
+<script>
+    const con = document.querySelector('.container');
+
+    fetch('https://picsum.photos/v2/list?page=2&limit=100')
+    .then(function(res) { return res.json(); })
+    .then(function(data) { 
+        if(data.length > 0) {
+            makeList(data);
+        }
+     })
+    .catch(function(data) {
+        console.error(data);
+    });
+
+    function makeList(data) {
+        console.log(con)
+        data.forEach(function(item) {
+            console.log(item);
+            const img = makeItem(item);
+            con.appendChild(img);
+        })
+    }
+
+    function makeItem(item) {
+        const img = document.createElement('img');
+        const width = Math.round(item.width*0.1);
+        const height = Math.round(item.height*0.1);
+
+        img.src = `https://picsum.photos/id/${item.id}/${width}/${height}`
+        img.alt = item.author
+        return img;
+    }
+</script>
+</html>

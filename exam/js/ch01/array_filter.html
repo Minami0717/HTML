@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const arr = [10,20,30,45,67,5];
+    const arr2 = arr.filter(function(val, idx) {
+        return val % 2 === 0;
+    })
+    console.log(arr)
+    console.log(arr2)
+
+    console.log('----------------')
+    const arr3 = arr.filter(val => val % 2 === 0);
+    console.log(arr3);
+</script>
+</html>

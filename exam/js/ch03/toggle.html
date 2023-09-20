@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .selected { font-weight: bold; color: red; }
+        span { cursor: pointer; }
+        span:not(:first-of-type) { margin-left: 5px;}
+    </style>
+</head>
+<body>
+    <span id="test" class="selected">test</span>
+</body>
+<script>
+    const test = document.querySelector('#test');
+    for (let i = 1; i <= 10; i++) {
+        const span = document.createElement('span');
+        span.innerText = i;
+        document.body.appendChild(span);
+        span.addEventListener('click', e => {
+            const spanList = document.querySelectorAll('span');
+            spanList.forEach(item => item.classList.toggle('selected', item.innerText === e.target.innerText));
+            e.target.classList.add('selected');
+        });
+
+        if(i === 1) {
+            span.classList.add('selected');
+        }
+    }
+</script>
+</html>

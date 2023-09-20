@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICON EDITOR</title>
+</head>
+<body>
+    <h1>icon_editor.html</h1>
+</body>
+<script>
+    const obj = {
+        a: 10,
+        b: 20
+    };
+
+    const div = document.createElement('div');
+    div.innerText = 'div';
+    div.id = 'id10';
+    div.a = 'aaa';
+    div.setAttribute('a', 'aaa');
+
+    document.body.append(div);
+
+    for(var item in obj) {
+        console.log(item);
+    }
+    function elt(name, attr) {
+        var node = document.createElement(name);
+        if(attr) {
+            for(var item in attr) {
+                if (attr.hasOwnProperty(item)) {
+                    node.setAttribute(item, attr[item]);
+                }
+            }
+        }
+        return node;
+    }
+
+    window.onload = () => {
+        const width = 16;
+        const height = 16;
+        createIconEditor(document.body, width, height);
+    }
+
+    function createIconEditor(parent, nx, ny) {
+        //color 선택
+        const inputColor = elt('input', { type: 'color' });
+        parent.appendChild(inputColor);
+
+        //모두 삭제 버튼
+        const inputClear = elt('input', { type: 'button', value: '모두 삭제'});
+        parent.appendChild(inputClear);
+
+        //편집기 화면 테이블
+        const table = elt('table');
+        parent.appendChild(table);
+
+        table.style.borderCollapse = 'collapse';
+        table.style.marginTop = '5px';
+
+        var cells = [];
+        for(var j=0; j<ny; j++) {
+            var tr = elt('tr');
+            table.appendChild(tr);
+
+            for(var i=0; i<nx; i++) {
+                var td = elt('td');
+                cells.push(td);
+                tr.appendChild(td);
+
+                td.style.width = td.style.height = '15px';
+                td.style.border = '1px solid gray';
+                td.style.backgroundColor = 'white';
+                td.style.transitionDuration = '.7s';
+                td.addEventListener('click', e => {
+                    e.target.style.backgroundColor =
+                    e.target.style.backgroundColor !== 'white' ? 'white' : inputColor.value;
+                })
+            }
+        }
+
+        inputClear.addEventListener('click', e => {
+            cells.forEach(item => item.style.backgroundColor = 'white');
+            // for (const c of cells) {
+            //     c.style.backgroundColor = 'white';
+            // }
+        });
+    }
+</script>
+</html>

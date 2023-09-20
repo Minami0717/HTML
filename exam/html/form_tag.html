@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>로그인, 회원가입</h1>
+    <form action="/api/login" method="get">
+        <div><label>이름: <input type="text" name="name" value="홍길동"></label></div>
+        <div>나이: <input type="number" name="age"></div>
+        <div>키: <input type="range" name="height"></div>
+        <div>취미:
+            <label>농구<input type="checkbox" name="hobby" value="1"></label>
+            <label>축구<input type="checkbox" name="hobby" value="2"></label>
+            <label>배구<input type="checkbox" name="hobby" value="3"></label>
+        </div>
+        <div>
+            성별:
+            <label><input type="radio" name="gender" value="0">여자</label>
+            <label><input type="radio" name="gender" value="1" checked>남자</label>
+        </div>
+        <div>
+            지역:
+            <select name="region">
+                <option>-- 선택 --</option>
+                <option value="1">서울</option>
+                <option value="2" selected>대전</option>
+                <option value="3">대구</option>
+            </select>
+        </div>
+        <div>
+            남길 말: <textarea name="cmt" placeholder="남길말"></textarea>
+        </div>
+        <div><input type="submit" value="전송"></div>
+    </form>
+</body>
+</html>

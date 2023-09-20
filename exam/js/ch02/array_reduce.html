@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const arr = [10,20,30,45,67,5];
+    const r = arr.reduce(function(sum, val) {
+        return sum + val;
+    })
+    console.log(arr.toString())
+    console.log(r)
+
+    const r2 = arr.reduce((pre, cur) => {
+        console.log(`pre: ${pre}, cur: ${cur}`);
+        return pre + cur;
+    });
+    console.log(r2);
+</script>
+</html>

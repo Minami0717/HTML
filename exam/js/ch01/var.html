@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    var a;
+    console.log(a)
+    a = 10;
+    console.log(a)
+    a = 'aaa'
+    console.log(a)
+    a = 10.2
+    console.log(a)
+
+    var n1 = 10;
+    n1 = n1 + n1;
+    console.log('n1:', n1)
+
+    var n2 = '10'
+    var r2 = n2 + n2
+    console.log('r2:', r2)
+
+    var n3 = parseInt(n2)
+    n3 = n3 + n3
+    console.log(n3)
+
+    var n4 = Number(n2)
+    n4 = n4 + n4
+    console.log(n4)
+
+    var n5 = String(n4)
+    n5 = n5 + n5
+    console.log(n5)
+
+    var name = 'hong', height = 153.2, age = 29
+    console.log('name: %s 키는 %fcm 나이는 %d살', name, height, age)
+
+    var r6 = 'name:' + name
+    console.log(r6)
+
+    var r7 = `name: ${name} 키는 ${height} 나이는 ${age}살`
+    console.log(r7)
+
+    let n8 = 10;
+    const n9 = 10;
+
+</script>
+</html>

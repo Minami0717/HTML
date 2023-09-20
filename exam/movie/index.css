@@ -1,0 +1,33 @@
+* { margin: 0; padding: 0; list-style: none; text-decoration: none; box-sizing: border-box; }
+.pointer { cursor: pointer; }
+body { background-color: #f5f5f5; }
+.wrap { display: grid; grid-template-columns: 200px minmax(420px, 1fr); grid-template-rows: 56px 1fr; }
+.header { background-color: #ff3b49; grid-row: span 2; min-height: 100vh; color: #fff; }
+.header .logo { margin: 40px 0 50px; font-size: 27px; text-align: center; font-family: Shrikhand, cursive; }
+.header .nav__container { margin-bottom: 40px; }
+.header .nav__title { display: block; font-size: 80%; background-color: #ff5662; padding: 8px 20px; margin-bottom: 12px; }
+.header .nav__list { font-size: 16px; padding: 0 20px; }
+.header .nav__item { margin-bottom: 8px; }
+.header .nav__link { color: #fff; }
+
+.top-bar { background-color: #f0f0f0; display: grid; grid-template-columns: 1fr 52px; column-gap: 5px; align-content: center; }
+.top-bar .search { padding: 0 10px; }
+.top-bar .search__form { width: 100%; }
+.top-bar .search__label { display: block; overflow: hidden; width: 0; height: 0;}
+.top-bar .search__input { width: 100%; padding: 8px 10px; border: 1px solid #d0d0d0; }
+.top-bar .search__input:focus,
+.top-bar .search__input:hover { outline: 0; border-color: #999;}
+.top-bar .profile { display: flex; justify-content: center; align-items: center; margin-right: 10px;}
+.top-bar .profile__icon { width: 40px; height: 40px; background-color: rgb(110, 90, 240); border-radius: 50%; text-align: center; line-height: 42px; font-family: Shrikhand, cursive; color: #fff; font-size: 18px;}
+
+.main .main__header { position: relative; font-size: 30px; text-align: center; padding: 100px 20px; background-image: url('http://unsplash.it/1200/600?image=495'); background-size: cover; }
+.main .main__header::after { content: ''; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(10,10,10,0.6); }
+.main .main__title { color: #fff; z-index: 1; position: relative; }
+
+.main .listing-card { max-width: 1600px; margin: 30px auto 60px; padding: 0 20px;}
+.main .listing-card__list { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px;}
+.main .listing-card__item { width: 100%; background-color: #fff; border: 1px solid #f0f0f0; padding: 20px;}
+.main .listing-card__image { padding-top: 150%; background-size: cover; background-repeat: no-repeat; }
+.main .listing-card__info { margin: 20px 0 10px; }
+.main .listing-card__name { font-size: 20px; }
+.main .listing-card__date { color: #333; margin-top: 6px; }
